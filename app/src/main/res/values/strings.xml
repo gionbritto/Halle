@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Halle</string>
+
+    <!-- Campos da tela Login !-->
+    <string name="login_str">Login</string>
+    <string name="usuario_str">Usuario</string>
+    <string name="login_edt_usuario_str">Informe seu usuario</string>
+    <string name="login_edt_senha_str"><font size="10dp">Informe sua senha</font></string>
+</resources>
