@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.prointer.halle.TelaCadastroActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350px"
+        android:layout_height="200px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="670px"
+        android:layout_height="720px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo_cadastro_nome"
+            android:layout_width="670px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/azurcolor"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/Nome"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/campo_cadastro_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_login_id"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            android:hint="@string/Digite_nome"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:textColorHint="@color/greyTextColor" />
+
+        <TextView
+            android:id="@+id/titulo_cadastro_email"
+            android:layout_width="670px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/azurcolor"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/Email"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/campo_cadastro_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_login_id"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            android:hint="@string/Digite_Email"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:textColorHint="@color/greyTextColor" />
+        <TextView
+            android:id="@+id/tcadastro_email"
+            android:layout_width="670px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/azurcolor"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/Senha"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/campo_cadastro_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_login_id"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            android:hint="@string/senha_edt_usuario_str"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:textColorHint="@color/greyTextColor" />
+
+        <Button
+            android:id="@+id/button_salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/campo_login_senha"
+            android:layout_marginTop="51dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/Botao_Salvar"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -6,4 +6,13 @@
     <string name="usuario_str">Usuario</string>
     <string name="login_edt_usuario_str">Informe seu usuario</string>
     <string name="login_edt_senha_str"><font size="10dp">Informe sua senha</font></string>
+    <string name="Email">E-mail</string>
+    <string name="Senha">Senha</string>
+    <string name="senha_edt_usuario_str">Informe sua senha</string>
+    <string name="Botao_Entrar">Entrar</string>
+    <string name="Botao_cadastrar">Cadastrar</string>
+    <string name="Nome">Nome</string>
+    <string name="Digite_nome">Digite seu nome</string>
+    <string name="Digite_Email">Digite seu E-mail</string>
+    <string name="Botao_Salvar">Salvar</string>
 </resources>

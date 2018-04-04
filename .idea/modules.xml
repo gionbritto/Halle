@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Halle.iml" filepath="$PROJECT_DIR$/Halle.iml" />
+      <module fileurl="file://C:\Users\diogo\Desktop\Aplicativos feitos\Halle\Halle.iml" filepath="C:\Users\diogo\Desktop\Aplicativos feitos\Halle\Halle.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\diogo\Desktop\Aplicativos feitos\Halle\app\app.iml" filepath="C:\Users\diogo\Desktop\Aplicativos feitos\Halle\app\app.iml" />
     </modules>
   </component>
 </project>
