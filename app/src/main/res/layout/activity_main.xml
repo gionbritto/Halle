@@ -9,23 +9,6 @@
     tools:context="com.prointer.halle.MainActivity">
 
 
-    <EditText
-        android:id="@+id/campo_login_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/titulo_login_senha"
-        android:background="@color/white"
-        android:fontFamily="sans-serif"
-        android:hint="@string/login_edt_senha_str"
-        android:inputType="text"
-        android:paddingBottom="8dp"
-        android:paddingLeft="16dp"
-        android:paddingTop="8dp"
-        android:textColor="@color/greyTextColor"
-        android:textColorHint="@color/greyTextColor" />
-
     <TextView
         android:id="@+id/titulo_login_email"
         android:layout_width="match_parent"
@@ -84,7 +67,7 @@
 
 
     <Button
-        android:id="@+id/button_salvar"
+        android:id="@+id/button_Entrar"
         android:layout_width="750px"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_cadastrar"
@@ -104,6 +87,22 @@
         android:layout_alignStart="@+id/img_logo_login"
         android:layout_marginBottom="23dp"
         android:text="@string/Botao_cadastrar" />
+
+    <EditText
+        android:id="@+id/campo_login_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/titulo_login_senha"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="20px"
+        android:textColor="@color/greyTextColor"
+        android:textColorHint="@color/greyTextColor" />
 
 
 </RelativeLayout>
