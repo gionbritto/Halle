@@ -53,6 +53,7 @@ public class TelaCadastroActivity extends Activity {
                     //Adicionando as informações no banco de dados
                     banco.execSQL("INSERT INTO pessoas (nome, email, senha) VALUES ('camponome','campoemail','camposenha')");
 
+
                 } catch (Exception e) {
 
                     e.printStackTrace();
