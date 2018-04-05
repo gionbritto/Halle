@@ -18,7 +18,7 @@ public class TelaCadastroActivity extends Activity {
     EditText campoemail;
     EditText camposenha;
     Button botaosalvarcadastro;
-
+    DBHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,70 +30,44 @@ public class TelaCadastroActivity extends Activity {
         camposenha = (EditText) findViewById(R.id.campo_cadastro_senha);
         botaosalvarcadastro = (Button) findViewById(R.id.button_salvar);
 
-        //Criando o banco de dados
-
-
+        //Instanciando a class do banco
+        db = new DBHelper(this);
 
 
         botaosalvarcadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //Pegando as informações que o usuário digitou
-                camponome.getText().toString();
-                campoemail.getText().toString();
-                camposenha.getText();
+                String nome = camponome.getText().toString();
+                String email = campoemail.getText().toString();
+                String senha = camposenha.getText().toString();
 
+                if (nome.equals("")) {
 
-                try {
+                    Toast.makeText(TelaCadastroActivity.this, "Campo nome vazio!", Toast.LENGTH_SHORT).show();
 
-                    SQLiteDatabase banco = openOrCreateDatabase("app", MODE_PRIVATE, null);
+                } else if (email.equals("")) {
 
-                    //Criando as tabelas
-                    banco.execSQL("CREATE TABLE IF NOT EXISTS usuario (nome VARCHAR, email VARCHAR, senha VARCHAR)");
+                    Toast.makeText(TelaCadastroActivity.this, "Campo email vazio!", Toast.LENGTH_SHORT).show();
 
-                    //Criar tabela com ID único nas colunas com autoincrement para gerar número automático.
-                    banco.execSQL("CREATE TABLE IF NOT EXISTS usuario (id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR, senha VARCHAR) ");
+                } else if (senha.equals("")) {
 
-                    //Adicionando as informações no banco de dados
-                    banco.execSQL("INSERT INTO pessoas (nome, email, senha) VALUES ('camponome','campoemail','camposenha')");
+                    Toast.makeText(TelaCadastroActivity.this, "Campo senha vazio!", Toast.LENGTH_SHORT).show();
+                } else {
 
+                    //Todos os campos preenchidos e salvando as informações do usuário no banco de dados
 
-                    //Criando um cursos para pesquisa nas colunas, ele para no última linha da coluna, é necessário retornar o cursos.
-                    Cursor cursor = banco.rawQuery("SELECT * FROM usuario ", null);
+                    long res = db.Criarusuario(nome, email, senha);
 
-                    //Recuperar o índice da coluna
-                    int indicecolunanome = cursor.getColumnIndex("nome");
-                    int indicecolunaemail = cursor.getColumnIndex("email");
-                    int indicecolunasenha = cursor.getColumnIndex("senha");
-                    int indicecolunaid = cursor.getColumnIndex("id");
+                    if (res > 0) {
 
+                        Toast.makeText(TelaCadastroActivity.this, "Usuário cadastrado!", Toast.LENGTH_SHORT).show();
+                    } else {
 
-                    //Voltando o cursor para a primeira linha da coluna
-                    cursor.moveToFirst();
-
-
-                    while (cursor != null) {
-
-                /*Esses códigos abaixo serve para recuperar as informações da coluna*/
-
-                        cursor.getString(indicecolunanome);
-
-                        Toast.makeText(TelaCadastroActivity.this, cursor.getString(indicecolunanome), Toast.LENGTH_SHORT).show();
-
-                        //Movendo o cursos para a próxima linha
-                        cursor.moveToNext();
-
+                        Toast.makeText(TelaCadastroActivity.this, "Cadastro inválido, tente novamente!", Toast.LENGTH_SHORT).show();
                     }
-
-
-
-
-                } catch (Exception e) {
-
-                    e.printStackTrace();
-
                 }
+
 
 
             }

@@ -27,7 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TelaCadastroActivity"></activity>
+        <activity android:name=".TelaCadastroActivity" />
+        <activity android:name=".TelaPesquisaActivity"></activity>
     </application>
 
 </manifest>
