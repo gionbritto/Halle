@@ -2,6 +2,7 @@ package com.prointer.halle;
 
 import android.app.Activity;
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.database.Cursor;
@@ -62,6 +63,8 @@ public class TelaCadastroActivity extends Activity {
                     if (res > 0) {
 
                         Toast.makeText(TelaCadastroActivity.this, "Usuário cadastrado!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(TelaCadastroActivity.this, MainActivity.class));
+
                     } else {
 
                         Toast.makeText(TelaCadastroActivity.this, "Cadastro inválido, tente novamente!", Toast.LENGTH_SHORT).show();

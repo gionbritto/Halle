@@ -76,7 +76,7 @@
         android:layout_marginBottom="23dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/Botao_Entrar"
-        android:textSize="15sp" />
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button_cadastrar"

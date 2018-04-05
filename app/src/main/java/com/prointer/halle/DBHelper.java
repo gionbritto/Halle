@@ -56,14 +56,30 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
 
         //Irá verificar os dados se estão corretos e no banco
-        Cursor cursor = db.rawQuery("SELECT * FROM usuario WHERE email AND senha", new String[]{email, senha});
+        Cursor cursor = db.rawQuery("SELECT * FROM usuario WHERE email=? AND senha=?", new String[]{email, senha});
 
         if (cursor.getCount() > 0) {
             return "OK";
         }
 
-        return "ERROs";
+        return "ERRO";
         //retornou
     }
+
+    public String Pesquisarusuarios(String nome) {
+
+        SQLiteDatabase db = getReadableDatabase();
+
+        //Irá verificar os dados se estão corretos e no banco
+        Cursor cursor = db.rawQuery("SELECT * FROM usuario WHERE nome=? ", new String[]{nome});
+
+        if (cursor.getCount() > 0) {
+            return "OK";
+        }
+
+        return "ERRO";
+        //retornou
+    }
+
 
 }

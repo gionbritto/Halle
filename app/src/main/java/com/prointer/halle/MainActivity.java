@@ -24,6 +24,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        db = new DBHelper(this);
+
         logincampoemail = (EditText) findViewById(R.id.campo_login_email);
         logincamposenha = (EditText) findViewById(R.id.campo_login_senha);
 
@@ -55,6 +57,8 @@ public class MainActivity extends Activity {
                     if (res.equals("OK")) { // Caso os dados estajam corretos irá acessar
 
                         Toast.makeText(MainActivity.this, "Acessando...", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, TelaPesquisaActivity.class));
+
                     } else {
 
                         Toast.makeText(MainActivity.this, "Login errado, tente novamente!", Toast.LENGTH_SHORT).show();
