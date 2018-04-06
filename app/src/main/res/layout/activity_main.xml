@@ -73,7 +73,7 @@
         android:layout_above="@+id/button_cadastrar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="23dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/Botao_Entrar"
         android:textSize="16sp" />

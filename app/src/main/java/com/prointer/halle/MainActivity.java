@@ -54,6 +54,7 @@ public class MainActivity extends Activity {
 
                     //Caso o usuário já preencheu as informações irá verificar se tem os dados no banco de dados
                     String res = db.Validarlogin(email, senha);
+
                     if (res.equals("OK")) { // Caso os dados estajam corretos irá acessar
 
                         Toast.makeText(MainActivity.this, "Acessando...", Toast.LENGTH_SHORT).show();
@@ -61,7 +62,7 @@ public class MainActivity extends Activity {
 
                     } else {
 
-                        Toast.makeText(MainActivity.this, "Login errado, tente novamente!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Login incorreto!", Toast.LENGTH_SHORT).show();
                     }
                 }
 

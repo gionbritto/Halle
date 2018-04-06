@@ -74,7 +74,8 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("SELECT * FROM usuario WHERE nome=? ", new String[]{nome});
 
         if (cursor.getCount() > 0) {
-            return "OK";
+            cursor.
+            return nome;
         }
 
         return "ERRO";
